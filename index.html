@@ -37,6 +37,7 @@ body{margin:0;font-family:'Montserrat',sans-serif;background:var(--bg)}
   <h3>Giỏ hàng</h3>
   <div id="cartList"></div>
   <div class="total">Tổng: <span id="total">0</span>đ</div>
+  <button class="btn" onclick="checkout()">THANH TOÁN</button>
 </div>
 
 <script>
@@ -111,6 +112,20 @@ const cartEl=document.getElementById("cart");
 const cartList=document.getElementById("cartList");
 const totalEl=document.getElementById("total");
 const countEl=document.getElementById("count");
+  <script>
+function checkout(){
+  if(cart.length===0){
+    alert("Giỏ hàng đang trống!");
+    return;
+  }
+
+  alert("🎉 Đặt hàng thành công!\nCảm ơn bạn đã mua hàng tại VERA 💖");
+  cart=[];
+  renderCart();
+  toggleCart();
+}
+</script>
+
 </script>
 
 </body>
